@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "task": "ART-R204",
+  "planVersion": "2.4",
+  "deliveryVersion": "art-r204-v1",
+  "layoutSpace": "logical-1920x1080",
+  "logicalCanvas": [1920, 1080],
+  "coordinateSystem": "top-left origin; pixels; rotations in radians",
+  "entryHandoff": {
+    "handoff": "H11",
+    "version": "web-r204-v1-h11",
+    "statePath": "web/review/web-r204-v1/handoff/entry-state.json",
+    "stateSha256": "9984499062f3aa6b2d6af1ad5dc1d0362bdf5e751bb4ec0a98a1500d45761e3f",
+    "readinessPath": "web/review/web-r204-v1/handoff/entry-ready.json",
+    "readinessSha256": "7435db46ab3c26170b78df5b4d500613ff3fc9075a2a70f7dfb830376d11a4c3",
+    "readoutTime": 90,
+    "ambientTime": 0,
+    "figure2bCardRect": [815, 205, 775, 610],
+    "inputAnchors": { "arabinose": [450, 770], "ahl": [450, 815], "nextLabel": [450, 870] },
+    "canvasLabelsPresent": true,
+    "note": "Actual E90 renderer state, not the E89 pause frame. Q00 withdraws Figure 2b and its labels as one object before the rail enters."
+  },
+  "safeRects": {
+    "copy": [105, 235, 530, 630],
+    "mechanismClip": [760, 220, 1060, 715],
+    "lens": [855, 230, 930, 435],
+    "controlsReserved": [0, 960, 1920, 120],
+    "evidence": [865, 215, 850, 656.1403508772]
+  },
+  "palette": {
+    "environment": "#27245B",
+    "copy": "#FFF2D9",
+    "inputA": "#34C9E8",
+    "inputB": "#FFC857",
+    "pca": "#A6DC59",
+    "cell": "#F56B73"
+  },
+  "rail": {
+    "worldCenterBase": [1320, 790],
+    "worldStepX": 1080,
+    "deviceDisplayWidth": 720,
+    "cameraPanXBySample": { "sample-none": 0, "sample-ahl": -1080, "sample-arabinose": -2160, "sample-both": -3240 },
+    "transitionSeconds": 3,
+    "easing": "smoothstep; zero velocity at endpoints; no overshoot",
+    "farSampleOpacityMax": 0.35,
+    "overviewCenters": [[920, 735], [1190, 735], [1460, 735], [1730, 735]],
+    "overviewDeviceWidth": 210
+  },
+  "deviceTemplate": {
+    "origin": [1320, 825],
+    "displayWidth": 720,
+    "rotation": 0,
+    "clip": null,
+    "layers": [
+      { "objectId": "device-base", "assetId": "electrode-base", "center": [1320, 825], "displayWidth": 720, "opacity": 1, "zIndex": 20 },
+      { "objectId": "device-gasket", "assetId": "silicone-gasket", "center": [1320, 755], "displayWidth": 416, "opacity": 1, "zIndex": 30 },
+      { "objectId": "device-gel-back", "assetId": "gel-back", "center": [1320, 710], "displayWidth": 400, "opacity": 0.72, "zIndex": 40 },
+      { "objectId": "device-cell", "assetId": "cell-master", "center": [1295, 737], "displayWidth": 112, "opacity": 1, "zIndex": 50 },
+      { "objectId": "device-gel-front", "assetId": "gel-front", "center": [1320, 777], "displayWidth": 404, "opacity": 0.62, "zIndex": 60 }
+    ],
+    "gelCellAnchor": [1320, 705],
+    "lensConnector": { "from": [1320, 665], "to": [1320, 705], "style": "thin-dashed", "mustNotTouchElectrode": true },
+    "independentInstanceRule": "Each sample clones this visual template but owns a distinct sampleId, cellId and molecular-state collection."
+  },
+  "lens": {
+    "rect": [855, 230, 930, 435],
+    "origin": [1320, 447.5],
+    "clip": [855, 230, 930, 435],
+    "backgroundAssetIds": ["case-cytoplasm", "interior-mid", "case-envelope-rim"],
+    "branchAnchors": { "C": [1290, 345], "N": [1290, 555] },
+    "fragmentAnchors": {
+      "C_single": [1435, 370],
+      "N_single": [1515, 520],
+      "C_associated": [1434, 447],
+      "N_associated": [1586, 443],
+      "assemblyReferenceCenter": [1510, 455]
+    },
+    "fragmentScale": { "sourceRepairScale": 0.45, "layoutMultiplier": 0.70, "effectiveScale": 0.315 },
+    "ribosomeAnchors": { "C": [1210, 335], "N": [1210, 540] },
+    "phzAnchors": [[1320, 590], [1425, 590], [1518, 590]],
+    "pcaAnchors": [[1640, 565], [1682, 590], [1720, 550]],
+    "inactiveGuideStyle": { "kind": "dashed-outline-only", "opacity": 0.47, "labelRequired": true, "notARealMolecule": true },
+    "drawOrder": ["cytoplasm", "interior-mid", "envelope-rim", "input-and-branch-paths", "ribosome", "fragment-guides", "actual-fragments", "phz", "pca", "editable-labels", "lens-border"]
+  },
+  "samples": [
+    { "sampleId": "sample-none", "cellId": "cell-none-01", "label": "None", "index": 0, "worldCenter": [1320, 790], "inputA": false, "inputB": false, "inducedC": false, "inducedN": false, "assembled": false, "qualitativeOutput": "Not expected", "publishedResult": "n.d." },
+    { "sampleId": "sample-ahl", "cellId": "cell-ahl-01", "label": "AHL", "index": 1, "worldCenter": [2400, 790], "inputA": false, "inputB": true, "inducedC": false, "inducedN": true, "assembled": false, "qualitativeOutput": "Not expected", "publishedResult": "n.d." },
+    { "sampleId": "sample-arabinose", "cellId": "cell-arabinose-01", "label": "Arabinose", "index": 2, "worldCenter": [3480, 790], "inputA": true, "inputB": false, "inducedC": true, "inducedN": false, "assembled": false, "qualitativeOutput": "Not expected", "publishedResult": "n.d." },
+    { "sampleId": "sample-both", "cellId": "cell-both-01", "label": "Both", "index": 3, "worldCenter": [4560, 790], "inputA": true, "inputB": true, "inducedC": true, "inducedN": true, "assembled": true, "qualitativeOutput": "Expected", "publishedResult": "Detectable output" }
+  ],
+  "layoutKeyframes": {
+    "Q01": { "authorTime": 19, "activeSampleId": "sample-none", "cameraPanX": 0, "lensRect": [855, 230, 930, 435], "deviceCenter": [1320, 825], "deviceWidth": 720, "showFragments": [], "showInactiveGuides": ["C", "N"], "showPhz": false, "showPca": false, "evidenceOpacity": 0 },
+    "Q02": { "authorTime": 29, "activeSampleId": "sample-ahl", "cameraPanX": -1080, "lensRect": [855, 230, 930, 435], "deviceCenter": [1320, 825], "deviceWidth": 720, "showFragments": ["N"], "showInactiveGuides": ["C"], "showRibosomeAt": "N", "showPhz": false, "showPca": false, "evidenceOpacity": 0 },
+    "Q03": { "authorTime": 39, "activeSampleId": "sample-arabinose", "cameraPanX": -2160, "lensRect": [855, 230, 930, 435], "deviceCenter": [1320, 825], "deviceWidth": 720, "showFragments": ["C"], "showInactiveGuides": ["N"], "showRibosomeAt": "C", "showPhz": false, "showPca": false, "evidenceOpacity": 0 },
+    "Q04": { "authorTime": 55, "activeSampleId": "sample-both", "cameraPanX": -3240, "lensRect": [855, 230, 930, 435], "deviceCenter": [1320, 825], "deviceWidth": 720, "showFragments": ["C", "N"], "showInactiveGuides": [], "assembled": true, "showPhz": true, "showPca": true, "evidenceOpacity": 0 },
+    "Q05": { "authorTime": 65, "activeSampleId": "sample-both", "cameraPanX": 0, "lensRect": [1320, 705, 0, 0], "overviewCenters": [[920, 735], [1190, 735], [1460, 735], [1730, 735]], "deviceWidth": 210, "showQualitativePredictions": true, "showMeasuredValues": false, "evidenceOpacity": 0 },
+    "Q06": { "authorTime": 77, "activeSampleId": null, "railExitX": 1920, "evidenceRect": [865, 215, 850, 656.1403508772], "evidenceOpacity": 1, "wholeFigureReveal": true, "animateBarHeight": false },
+    "Q08": { "authorTime": 89, "activeSampleId": null, "evidenceRect": [865, 215, 850, 656.1403508772], "evidenceOpacity": 1, "retainInputIdentity": true, "nextHint": "Next · beyond this circuit" }
+  },
+  "responsive": {
+    "mode": "uniform contain within desktop viewport; UI copy remains DOM",
+    "verifyViewports": [[1920, 1080], [1366, 768]],
+    "scaleAt1366x768": 0.7111111111,
+    "minimumEvidenceWidthAt1366": 604.4444444,
+    "note": "Do not shrink the full composition independently from the logical canvas; keep the copy and evidence regions separate."
+  },
+  "scientificLimits": [
+    "The rail is a schematic comparison of four independent samples, not claimed experimental hardware.",
+    "Changing selection moves to another sample; it does not remove inducers or proteins from one culture.",
+    "Inactive dashed guides are explanatory positions, not present molecules.",
+    "Qualitative predictions are not current measurements; n.d. is not zero microamps.",
+    "Figure 4b remains an unmodified evidence image and is never animated by bar height."
+  ]
+}

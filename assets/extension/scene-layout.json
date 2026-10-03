@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "task": "ART-R205",
+  "planVersion": "2.5",
+  "deliveryVersion": "art-r205-v1",
+  "layoutSpace": "logical-1920x1080",
+  "logicalCanvas": [1920, 1080],
+  "coordinateSystem": "top-left origin; logical pixels; path direction follows SVG d order",
+  "productionSvg": "signal-space.svg",
+  "entryHandoff": {
+    "preferred": "H14 WEB-R205 actual Q90 when published",
+    "calibratedFrom": "H13 web-r204-v1-h13 actual Q90",
+    "statePath": "web/review/web-r204-v1/handoff/end-state.json",
+    "figure4bEntryRect": [865, 215, 850, 656.1403508772],
+    "figure4bExitRect": [1680, 165, 100, 77.1929824561],
+    "transformRule": "uniform contain; preserve complete original pixels and caption identity; replace with DOM Case evidence control after exit",
+    "h14StatusAtDelivery": "not published; WEB must compare H14 rect and hashes before X00 integration"
+  },
+  "safeRects": {
+    "copy": [105, 270, 530, 470],
+    "stage": [780, 215, 1030, 670],
+    "stageLabel": [800, 170, 900, 70],
+    "responsePlot": [920, 290, 780, 425],
+    "sourceMarker": [1470, 230, 300, 64],
+    "controlsReserved": [0, 960, 1920, 120]
+  },
+  "palette": {
+    "environment": "#0E174F",
+    "copy": "#FFF2D9",
+    "muted": "#B8D8EC",
+    "inputA": "#34C9E8",
+    "inputB": "#FFC857",
+    "processing": "#A18CFF",
+    "positive": "#A6DC59",
+    "warning": "#F56B73"
+  },
+  "layers": [
+    {"id":"ambient-back","z":10,"parallax":[8,14],"defaultVisible":true},
+    {"id":"logic-paths","z":30,"defaultVisible":true},
+    {"id":"continuum-layer","z":35,"defaultVisible":false},
+    {"id":"window-layer","z":38,"defaultVisible":false},
+    {"id":"logic-nodes","z":40,"defaultVisible":true},
+    {"id":"implementation-layer","z":42,"defaultVisible":false},
+    {"id":"end-state-layer","z":45,"defaultVisible":false},
+    {"id":"ambient-front","z":70,"parallax":[-3,-6],"defaultVisible":true}
+  ],
+  "paths": {
+    "input-a-track":{"from":[900,365],"to":[1335,485],"direction":"input to rule center","pulseColor":"#34C9E8"},
+    "input-b-track":{"from":[900,610],"to":[1335,485],"direction":"input to rule center","pulseColor":"#FFC857"},
+    "merge-guide":{"center":[1335,485],"direction":"closed clockwise contour; decorative/operator focus only"},
+    "output-track":{"from":[1335,485],"to":[1710,485],"direction":"rule center to output","pulseColor":"#A6DC59"},
+    "continuum-rail":{"from":[900,735],"to":[1710,735],"direction":"normalized 0 to 1","domain":[0,1]},
+    "window-frame":{"lowerX":1143,"upperX":1467,"top":395,"bottom":695,"defaultThresholds":{"L":0.3,"H":0.7}},
+    "dna-cassette-frame":{"rect":[1370,470,345,156],"flowDirection":"left to right; show at most one authored inversion"}
+  },
+  "anchors": {
+    "inputA":[900,365],"inputB":[900,610],"ruleCenter":[1335,485],"output":[1710,485],
+    "continuumStart":[900,735],"continuumMid":[1305,735],"continuumEnd":[1710,735],
+    "implementation":{"sensor":[950,548],"recombinase":[1200,548],"dna":[1542,548]}
+  },
+  "sceneStates": {
+    "X01":{"visible":["ambient-back","logic-paths","logic-nodes","ambient-front"],"rule":"OR hold after AND comparison","inputs":{"A":1,"B":1},"output":1},
+    "X03":{"visible":["ambient-back","continuum-layer","ambient-front"],"probeX":0.5,"note":"independent normalized input level, not elapsed time"},
+    "X05":{"visible":["ambient-back","continuum-layer","window-layer","ambient-front"],"probeX":0.5,"L":0.3,"H":0.7,"output":1},
+    "X06":{"visible":["ambient-back","implementation-layer","ambient-front"],"state":"post single inversion; persistent state note required"},
+    "X08":{"visible":["ambient-back","end-state-layer","ambient-front"],"labels":["Logic rules","Graded processing","Threshold decisions"]}
+  },
+  "x00Transform": {
+    "fromRect":[865,215,850,656.1403508772],"toRect":[1680,165,100,77.1929824561],"startSecond":2,"endSecond":6,
+    "inputRelabelSecond":[6,10],"removePublishedFigureLabelWithFigure":true
+  },
+  "responsive": {
+    "mode":"uniform contain within desktop viewport; text and controls remain DOM",
+    "verifyViewports":[[1920,1080],[1366,768]],"scaleAt1366x768":0.7111111111,
+    "minimumSuggestedBodyPxAt1366":18.5,"minimumSuggestedLabelPxAt1366":16
+  },
+  "consumerContract": {
+    "mount":"inline the SVG or fetch its XML, preserve IDs, and animate the production paths directly",
+    "pathMotion":"use getTotalLength/getPointAtLength or Path2D from each listed d attribute; do not redraw substitute paths",
+    "copy":"all words, values, equations, buttons, axes, and source labels are WEB DOM/canvas overlays",
+    "curve":"the mathematical response curve is generated entirely by WEB from ln(1+9*x)/ln(10); the production SVG contains no baked response curve or data marks",
+    "pauseMotion":"freeze parallax and pulses; retain readable static 0/1 and labels"
+  },
+  "scientificLimits": [
+    "The space is an abstract teaching environment, not a bacterial interior.",
+    "OR and NOT are abstract rules, not capabilities demonstrated by the split-T7 case.",
+    "The continuous rail is normalized and has no experimental units.",
+    "The DNA schematic refers to a separate study and must not be attached to the Bradley PCA circuit.",
+    "QA previews are review artifacts only and must never be used as production slideshow backgrounds."
+  ]
+}

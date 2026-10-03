@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="asset-title asset-desc">
+  <title id="asset-title">Editable abstract signal-processing space</title>
+  <desc id="asset-desc">Layered ribbons and geometric paths for logic, continuous response, concentration windows, and a generic DNA cassette schematic.</desc>
+  <defs>
+    <linearGradient id="ribbon-back-gradient" x1="760" y1="240" x2="1810" y2="850" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4745C6" stop-opacity=".34"/>
+      <stop offset=".48" stop-color="#7357D7" stop-opacity=".19"/>
+      <stop offset="1" stop-color="#1FC2D1" stop-opacity=".12"/>
+    </linearGradient>
+    <linearGradient id="ribbon-front-gradient" x1="790" y1="870" x2="1810" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#20C9E8" stop-opacity=".13"/>
+      <stop offset=".48" stop-color="#9E7BFF" stop-opacity=".20"/>
+      <stop offset="1" stop-color="#FFC857" stop-opacity=".10"/>
+    </linearGradient>
+    <linearGradient id="cyan-gold-gradient" x1="900" y1="485" x2="1710" y2="485" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#34C9E8"/>
+      <stop offset=".52" stop-color="#A18CFF"/>
+      <stop offset="1" stop-color="#FFC857"/>
+    </linearGradient>
+    <radialGradient id="center-glow" cx="0" cy="0" r="1" gradientTransform="translate(1335 485) rotate(90) scale(176)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A18CFF" stop-opacity=".25"/>
+      <stop offset="1" stop-color="#A18CFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <g id="ambient-back" data-z="10">
+    <path id="ambient-back-ribbon" d="M730 292C940 196 1114 231 1264 315C1434 410 1582 403 1848 272L1848 475C1590 579 1431 568 1252 469C1088 379 925 380 730 470Z" fill="url(#ribbon-back-gradient)"/>
+    <path id="ambient-back-echo" d="M772 751C1002 616 1167 635 1360 714C1512 777 1650 775 1833 677" fill="none" stroke="#6D64F5" stroke-opacity=".12" stroke-width="118" stroke-linecap="round"/>
+    <circle id="rule-center-glow" cx="1335" cy="485" r="176" fill="url(#center-glow)"/>
+  </g>
+
+  <g id="ambient-front" data-z="70">
+    <path id="ambient-front-ribbon" d="M760 846C1011 716 1140 741 1301 799C1489 868 1636 839 1840 717L1840 882C1610 974 1456 982 1274 918C1102 858 964 849 760 952Z" fill="url(#ribbon-front-gradient)"/>
+    <path id="ambient-front-thread" d="M820 827C1045 745 1215 789 1368 838C1512 884 1658 856 1795 770" fill="none" stroke="#FFF2D9" stroke-opacity=".12" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <g id="logic-paths" data-z="30" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path id="input-a-track" d="M900 365C1035 365 1124 386 1207 426C1254 448 1296 471 1335 485" stroke="#34C9E8" stroke-width="12"/>
+    <path id="input-b-track" d="M900 610C1032 610 1120 588 1205 548C1255 524 1299 499 1335 485" stroke="#FFC857" stroke-width="12"/>
+    <path id="merge-guide" d="M1246 485C1272 417 1398 417 1424 485C1398 553 1272 553 1246 485Z" stroke="#A18CFF" stroke-width="6" stroke-dasharray="3 15"/>
+    <path id="output-track" d="M1335 485C1458 485 1570 485 1710 485" stroke="url(#cyan-gold-gradient)" stroke-width="14"/>
+    <path id="output-track-underlay" d="M1335 485C1458 485 1570 485 1710 485" stroke="#FFF2D9" stroke-opacity=".12" stroke-width="34"/>
+  </g>
+
+  <g id="logic-nodes" data-z="40">
+    <circle id="input-a-anchor" cx="900" cy="365" r="25" fill="#0E174F" stroke="#34C9E8" stroke-width="6"/>
+    <circle id="input-b-anchor" cx="900" cy="610" r="25" fill="#0E174F" stroke="#FFC857" stroke-width="6"/>
+    <circle id="rule-center-ring" cx="1335" cy="485" r="84" fill="#181753" fill-opacity=".78" stroke="#A18CFF" stroke-width="5"/>
+    <circle id="rule-center-core" cx="1335" cy="485" r="52" fill="#A18CFF" fill-opacity=".16"/>
+    <path id="rule-center-diamond" d="M1335 444L1376 485L1335 526L1294 485Z" fill="#FFF2D9" fill-opacity=".10" stroke="#FFF2D9" stroke-opacity=".74" stroke-width="3"/>
+    <circle id="output-anchor" cx="1710" cy="485" r="31" fill="#0E174F" stroke="#A6DC59" stroke-width="7"/>
+    <circle id="output-halo" cx="1710" cy="485" r="54" fill="none" stroke="#A6DC59" stroke-opacity=".23" stroke-width="11"/>
+  </g>
+
+  <g id="continuum-layer" data-z="35">
+    <path id="continuum-rail" d="M900 735C1102 735 1304 735 1510 735C1581 735 1648 735 1710 735" fill="none" stroke="#FFF2D9" stroke-opacity=".82" stroke-width="7" stroke-linecap="round"/>
+    <path id="continuum-rail-glow" d="M900 735H1710" fill="none" stroke="url(#cyan-gold-gradient)" stroke-opacity=".34" stroke-width="25" stroke-linecap="round" filter="url(#soft-glow)"/>
+    <g id="continuum-ticks" fill="#FFF2D9">
+      <rect x="896" y="717" width="8" height="36" rx="4"/><rect x="1098" y="722" width="7" height="26" rx="3.5"/><rect x="1301" y="717" width="8" height="36" rx="4"/><rect x="1503" y="722" width="7" height="26" rx="3.5"/><rect x="1706" y="717" width="8" height="36" rx="4"/>
+    </g>
+    <circle id="continuum-probe" cx="1305" cy="735" r="20" fill="#0E174F" stroke="#34C9E8" stroke-width="7"/>
+  </g>
+
+  <g id="window-layer" data-z="38">
+    <path id="window-frame" d="M1143 695V395M1467 695V395M1143 395H1467V695H1143Z" fill="#A6DC59" fill-opacity=".10" stroke="#A6DC59" stroke-opacity=".86" stroke-width="5" stroke-linejoin="round"/>
+    <path id="window-lower-guide" d="M1143 395V760" fill="none" stroke="#34C9E8" stroke-width="5" stroke-dasharray="12 11"/>
+    <path id="window-upper-guide" d="M1467 395V760" fill="none" stroke="#FFC857" stroke-width="5" stroke-dasharray="12 11"/>
+    <path id="window-bracket" d="M1143 380V360H1467V380" fill="none" stroke="#A6DC59" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <g id="implementation-layer" data-z="42">
+    <path id="implementation-flow" d="M900 548C1015 548 1060 548 1135 548M1260 548H1370M1490 548H1715" fill="none" stroke="#FFF2D9" stroke-opacity=".40" stroke-width="7" stroke-linecap="round" stroke-dasharray="8 13"/>
+    <g id="sensor-node">
+      <circle cx="950" cy="548" r="65" fill="#34C9E8" fill-opacity=".15" stroke="#34C9E8" stroke-width="6"/>
+      <path d="M921 548C935 516 965 516 979 548C965 580 935 580 921 548Z" fill="#34C9E8" fill-opacity=".60"/>
+    </g>
+    <g id="recombinase-node">
+      <circle cx="1200" cy="548" r="65" fill="#A18CFF" fill-opacity=".15" stroke="#A18CFF" stroke-width="6"/>
+      <path d="M1164 548C1181 519 1219 519 1236 548C1219 577 1181 577 1164 548Z" fill="none" stroke="#FFF2D9" stroke-opacity=".82" stroke-width="7"/>
+      <circle cx="1200" cy="548" r="13" fill="#FFC857"/>
+    </g>
+    <g id="dna-cassette-frame">
+      <rect x="1370" y="470" width="345" height="156" rx="42" fill="#11154C" fill-opacity=".78" stroke="#FFF2D9" stroke-opacity=".62" stroke-width="5"/>
+      <path id="dna-backbone" d="M1410 548H1677" fill="none" stroke="#FFF2D9" stroke-width="6" stroke-linecap="round"/>
+      <path id="dna-left-site" d="M1455 526L1490 548L1455 570Z" fill="#34C9E8"/>
+      <path id="dna-cassette" d="M1512 515H1607L1642 548L1607 581H1512Z" fill="#FFC857" fill-opacity=".86" stroke="#FFF2D9" stroke-opacity=".42" stroke-width="3"/>
+      <path id="dna-right-site" d="M1670 526L1635 548L1670 570Z" fill="#34C9E8"/>
+    </g>
+  </g>
+
+  <g id="end-state-layer" data-z="45">
+    <path id="end-logic-loop" d="M950 432C922 432 900 454 900 482V565C900 593 922 615 950 615H1048C1076 615 1098 593 1098 565V482C1098 454 1076 432 1048 432Z" fill="#34C9E8" fill-opacity=".10" stroke="#34C9E8" stroke-opacity=".55" stroke-width="5"/>
+    <path id="end-graded-loop" d="M1246 432C1218 432 1196 454 1196 482V565C1196 593 1218 615 1246 615H1344C1372 615 1394 593 1394 565V482C1394 454 1372 432 1344 432Z" fill="#A18CFF" fill-opacity=".10" stroke="#A18CFF" stroke-opacity=".58" stroke-width="5"/>
+    <path id="end-threshold-loop" d="M1542 432C1514 432 1492 454 1492 482V565C1492 593 1514 615 1542 615H1640C1668 615 1690 593 1690 565V482C1690 454 1668 432 1640 432Z" fill="#FFC857" fill-opacity=".10" stroke="#FFC857" stroke-opacity=".58" stroke-width="5"/>
+    <path id="end-connector" d="M1098 524H1196M1394 524H1492" fill="none" stroke="#FFF2D9" stroke-opacity=".40" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>
